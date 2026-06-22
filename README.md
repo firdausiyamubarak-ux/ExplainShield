@@ -20,6 +20,12 @@ This means a security analyst can see not just "this file is malware" but "this 
 - Applicable in SOC environments, threat hunting, and malware research
 - Contributes to building safer digital infrastructure globally
 
+## Why This Matters Globally
+
+Cybersecurity is not just a technical problem — it is a human one. In developing countries, hospitals, schools, and government institutions are increasingly targeted by malware attacks with no resources to defend themselves. ExplainShield was built with this in mind: an open, explainable tool that doesn't require a PhD to understand, making AI-powered threat detection accessible to defenders everywhere.
+
+As a student from India building tools that address global security challenges, this project reflects my belief that technology should serve people — not just those with resources, but communities worldwide that depend on secure digital infrastructure.
+
 ## Results
 
 | Metric | Score |
