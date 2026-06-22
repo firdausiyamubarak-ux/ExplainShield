@@ -3,9 +3,22 @@
 
 > Detects malware with 99.4% ROC-AUC and explains every prediction using SHAP values mapped to MITRE ATT&CK tactics.
 
-## Overview
+## The Problem
 
-ExplainShield is an explainable machine learning system for malware detection trained on the EMBER 2018 dataset — 1 million real-world PE file samples. Unlike black-box detectors, ExplainShield tells you **why** a file is malicious by mapping its most influential features to real-world attack techniques from the MITRE ATT&CK framework.
+Cyberattacks cost the global economy over $8 trillion in 2023. Traditional antivirus tools rely on known signatures — they fail against new, never-seen-before malware. Modern AI detectors improve accuracy but operate as black boxes: they flag a file as malicious but cannot explain why. Security analysts are left blind, unable to understand the threat, respond effectively, or improve defenses.
+
+## What ExplainShield Does
+
+ExplainShield combines high-accuracy malware detection with full transparency. It doesn't just detect — it explains. Every prediction comes with a ranked list of features that drove the decision, mapped directly to real-world attack techniques from the MITRE ATT&CK framework used by cybersecurity professionals worldwide.
+
+This means a security analyst can see not just "this file is malware" but "this file is malware because it exhibits sandbox evasion behavior (T1497), attempts to transfer tools remotely (T1105), and probes the file system (T1083)."
+
+## Real-World Impact
+
+- Speeds up incident response by giving analysts actionable threat context
+- Bridges the gap between AI and human decision-making in cybersecurity
+- Applicable in SOC environments, threat hunting, and malware research
+- Contributes to building safer digital infrastructure globally
 
 ## Results
 
@@ -20,10 +33,10 @@ ExplainShield is an explainable machine learning system for malware detection tr
 
 ## How It Works
 
-1. **Feature Extraction** — 2,381 static features extracted from PE files (headers, imports, sections, strings)
+1. **Feature Extraction** — 2,381 static features from PE file headers, imports, sections, and strings
 2. **LightGBM Classification** — gradient boosting model trained on EMBER 2018
-3. **SHAP Explainability** — per-prediction feature importance scores
-4. **MITRE ATT&CK Mapping** — top features mapped to real attack techniques (T1497, T1105, T1083, T1059)
+3. **SHAP Explainability** — per-prediction feature importance using TreeExplainer
+4. **MITRE ATT&CK Mapping** — top features mapped to real attack techniques
 
 ## MITRE ATT&CK Techniques Detected
 
@@ -48,15 +61,15 @@ ExplainShield is an explainable machine learning system for malware detection tr
 
 🔗 [Try it on HuggingFace Spaces](#) *(link coming soon)*
 
-## Dataset
-
-[EMBER 2018 — dhoogla/ember-2018-v2-features](https://www.kaggle.com/datasets/dhoogla/ember-2018-v2-features)
-
 ## Kaggle Notebook
 
 🔗 [View on Kaggle](https://kaggle.com/firdausiyamubarak/explainshield-v1)
 
+## Dataset
+
+[EMBER 2018 — dhoogla/ember-2018-v2-features](https://www.kaggle.com/datasets/dhoogla/ember-2018-v2-features)
+
 ## Author
 
 **Firdausiya Mubarak** — AI × Cybersecurity  
-Building at the intersection of explainable AI and threat intelligence.
+Building explainable AI systems at the intersection of machine learning and global cybersecurity.
