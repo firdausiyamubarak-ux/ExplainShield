@@ -65,7 +65,7 @@ As a student from India building tools that address global security challenges, 
 
 ## Live Demo
 
-🔗 [Try it on HuggingFace Spaces](#) *(link coming soon)*
+🔗 [Try it on HuggingFace Spaces](https://huggingface.co/spaces/firdausiya22/ExplainShield)
 
 ## Kaggle Notebook
 
